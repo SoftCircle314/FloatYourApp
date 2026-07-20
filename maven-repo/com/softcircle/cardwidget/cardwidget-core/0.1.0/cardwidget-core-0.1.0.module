@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.softcircle.cardwidget",
+    "module": "cardwidget-core",
+    "version": "0.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cardwidget-core-0.1.0.aar",
+          "url": "cardwidget-core-0.1.0.aar",
+          "size": 11509,
+          "sha512": "87ae14b484df095e58a42beb65515e78e8ea34a928db909c6c6e05b4c8c1098f2ff7c70691bb355069ab6d5cc05a980683366da6aada6c2247b690a2937f7744",
+          "sha256": "b32fc51e2373ad337a3c32feb1cbad0649fef51f0046b0c9118b3638d3291584",
+          "sha1": "d1d62970d7a6e78e3159dcb065062c001abd5f86",
+          "md5": "55b5f7d126e00a942435e8a67fd414c3"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.6.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cardwidget-core-0.1.0.aar",
+          "url": "cardwidget-core-0.1.0.aar",
+          "size": 11509,
+          "sha512": "87ae14b484df095e58a42beb65515e78e8ea34a928db909c6c6e05b4c8c1098f2ff7c70691bb355069ab6d5cc05a980683366da6aada6c2247b690a2937f7744",
+          "sha256": "b32fc51e2373ad337a3c32feb1cbad0649fef51f0046b0c9118b3638d3291584",
+          "sha1": "d1d62970d7a6e78e3159dcb065062c001abd5f86",
+          "md5": "55b5f7d126e00a942435e8a67fd414c3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 秒表面板预览：深色底 + 时间环暗示 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="280dp"
+                android:height="120dp" />
+            <solid android:color="#1B1F24" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <!-- 外环 -->
+    <item
+        android:top="18dp"
+        android:bottom="18dp"
+        android:left="96dp"
+        android:right="96dp">
+        <shape android:shape="oval">
+            <stroke
+                android:width="6dp"
+                android:color="#3D9BFF" />
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+    <!-- 内圆 -->
+    <item
+        android:top="32dp"
+        android:bottom="32dp"
+        android:left="110dp"
+        android:right="110dp">
+        <shape android:shape="oval">
+            <solid android:color="#2A3138" />
+        </shape>
+    </item>
+    <!-- 时间条 -->
+    <item
+        android:top="52dp"
+        android:bottom="58dp"
+        android:left="124dp"
+        android:right="124dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E8F1FF" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+</layer-list>

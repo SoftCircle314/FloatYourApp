@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 运营面板预览：蓝渐变横幅 + 文案/按钮占位 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="280dp"
+                android:height="120dp" />
+            <gradient
+                android:angle="135"
+                android:centerColor="#1976D2"
+                android:endColor="#42A5F5"
+                android:startColor="#0D47A1"
+                android:type="linear" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="72dp"
+        android:left="20dp"
+        android:right="120dp"
+        android:top="28dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#CCFFFFFF" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="56dp"
+        android:left="20dp"
+        android:right="160dp"
+        android:top="48dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#88FFFFFF" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="18dp"
+        android:left="20dp"
+        android:right="180dp"
+        android:top="78dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFF59D" />
+            <corners android:radius="12dp" />
+        </shape>
+    </item>
+</layer-list>

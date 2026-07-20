@@ -1,0 +1,37 @@
+// FloatYourApp — 开源 Demo + 文档（负一屏远程面板）
+buildscript {
+    repositories {
+        maven { url = uri("${rootDir}/maven-repo") }
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+    }
+    ext.kotlin_version = '1.9.24'
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.3.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        // 本仓内嵌 AAR（开源默认路径，无需 GitHub Packages token）
+        maven { url = uri("${rootProject.projectDir}/maven-repo") }
+        // 可选：远程 raw 布局（公开仓推送后可用；OWNER 见 gradle.properties）
+        def githubOwner = findProperty('SOFTCIRCLE_GITHUB_OWNER')
+        if (githubOwner) {
+            maven {
+                url = uri("https://raw.githubusercontent.com/${githubOwner}/FloatYourApp/main/maven-repo")
+            }
+        }
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

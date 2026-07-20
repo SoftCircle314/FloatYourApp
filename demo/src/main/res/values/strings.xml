@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FloatYourApp</string>
+    <string name="card_widget_default_label">FloatYourApp Demo</string>
+    <string name="panel_stopwatch_label">秒表演示</string>
+    <string name="panel_promo_label">运营演示</string>
+    <string name="promo_title">限时活动</string>
+    <string name="promo_body">新用户专享福利进行中，点下方按钮回到本 App 领取。</string>
+    <string name="promo_cta">打开本 App</string>
+    <string name="home_hint">负一屏一页一个面板。点下方进入对应预览页（宽 320dp，高度铺满，接近 SoftCircle 内容区）。</string>
+    <string name="home_entry_meta">开发者：XML 建议尺寸 %1$d × %2$d dp · panelId=%3$s</string>
+    <string name="preview_page_hint">预览：%1$s · 壳宽 320dp · 高度铺满本页（对齐负一屏一页）</string>
+    <string name="preview_dev_meta">开发者信息：XML 建议尺寸 %1$d × %2$d dp（android:minWidth / minHeight）· panelId=%3$s\n宿主添加列表不会展示建议尺寸，仅供联调对照。</string>
+</resources>

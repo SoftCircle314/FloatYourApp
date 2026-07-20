@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    客户端卡片小组件预览图 (120dp × 80dp)。
+    与弹框列表中的 ImageView 尺寸一致，避免缩放变形。
+    模拟 DemoCardWidgetProvider 的卡片外观：
+    浅色背景 + 蓝色标题栏 + 文字占位 + 按钮。
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景圆角卡片 -->
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="120dp"
+                android:height="80dp" />
+            <solid android:color="#FAFAFA" />
+            <corners android:radius="4dp" />
+            <stroke
+                android:width="0.5dp"
+                android:color="#E0E0E0" />
+        </shape>
+    </item>
+    <!-- 顶部蓝色标题栏（高约 14dp） -->
+    <item
+        android:top="0dp"
+        android:bottom="66dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2196F3" />
+            <corners
+                android:topLeftRadius="4dp"
+                android:topRightRadius="4dp" />
+        </shape>
+    </item>
+    <!-- 标题文字占位（白色横条） -->
+    <item
+        android:top="4dp"
+        android:bottom="70dp"
+        android:left="6dp"
+        android:right="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#B3FFFFFF" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+    <item
+        android:top="10dp"
+        android:bottom="70dp"
+        android:left="6dp"
+        android:right="20dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#66FFFFFF" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+    <!-- 描述文字占位 -->
+    <item
+        android:top="30dp"
+        android:bottom="44dp"
+        android:left="6dp"
+        android:right="30dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#D0D0D0" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+    <item
+        android:top="36dp"
+        android:bottom="44dp"
+        android:left="6dp"
+        android:right="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#E0E0E0" />
+            <corners android:radius="1dp" />
+        </shape>
+    </item>
+    <!-- 按钮占位（高约 10dp） -->
+    <item
+        android:top="48dp"
+        android:bottom="22dp"
+        android:left="6dp"
+        android:right="6dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#2196F3" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+</layer-list>

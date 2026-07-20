@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    namespace 'com.softcircle.cardwidget.clientdemo'
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+
+    defaultConfig {
+        applicationId "com.softcircle.cardwidget.clientdemo"
+        minSdkVersion 30
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug { minifyEnabled false }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    // 默认：已发布的闭源 Client AAR
+    // 本地改 SDK：-Pcardwidget.useLocalServer
+    if (rootProject.hasProperty('cardwidget.useLocalServer')) {
+        implementation project(':cardwidget-client')
+    } else {
+        implementation "com.softcircle.cardwidget:cardwidget-client:${CARDWIDGET_VERSION}"
+    }
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
+}

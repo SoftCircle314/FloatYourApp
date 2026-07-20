@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SoftCircle 负一屏：一页一个面板，壳宽约 320dp，高度随浮层内容区。
+  多面板用 <panel> 声明（宿主只读 XML，不拉起客户端进程）。
+  minHeight 为推荐可视高度，便于本地预览与负一屏对齐。
+-->
+<cardwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.softcircle.com/cardwidget"
+    android:label="@string/card_widget_default_label"
+    android:minWidth="280dp"
+    android:minHeight="360dp"
+    android:updatePeriodMillis="0"
+    card:partnerId="softcircle-widget-demo">
+
+    <!-- 秒表：不配 previewImage → 宿主弹框左右布局（Icon + 信息） -->
+    <panel
+        card:panelId="stopwatch"
+        android:label="@string/panel_stopwatch_label"
+        android:minWidth="280dp"
+        android:minHeight="360dp" />
+
+    <!-- 运营：单独配置预览图 → 宿主弹框预览卡片布局 -->
+    <panel
+        card:panelId="promo"
+        android:label="@string/panel_promo_label"
+        android:minWidth="280dp"
+        android:minHeight="360dp"
+        android:previewImage="@drawable/promo_preview"
+        card:partnerId="softcircle-widget-demo" />
+</cardwidget-provider>

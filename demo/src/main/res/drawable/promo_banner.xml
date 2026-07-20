@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 运营卡配图占位：负一屏宽约 320dp，配图建议横幅比例 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="280dp"
+                android:height="120dp" />
+            <gradient
+                android:angle="135"
+                android:startColor="#1565C0"
+                android:centerColor="#1976D2"
+                android:endColor="#42A5F5"
+                android:type="linear" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item
+        android:top="36dp"
+        android:bottom="60dp"
+        android:left="24dp"
+        android:right="100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#B3FFFFFF" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item
+        android:top="52dp"
+        android:bottom="52dp"
+        android:left="24dp"
+        android:right="140dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#80FFFFFF" />
+            <corners android:radius="2dp" />
+        </shape>
+    </item>
+    <item
+        android:top="24dp"
+        android:bottom="24dp"
+        android:left="200dp"
+        android:right="24dp">
+        <shape android:shape="oval">
+            <solid android:color="#33FFFFFF" />
+        </shape>
+    </item>
+</layer-list>
