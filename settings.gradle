@@ -1,12 +1,13 @@
 rootProject.name = "FloatYourApp"
 
-// 开源 Demo：默认只依赖 Maven AAR。
-// 本地旁路 SoftCircleServer：./gradlew :demo:assembleDebug -Pcardwidget.useLocalServer
-def useLocalServer = hasProperty('cardwidget.useLocalServer')
-def serverRoot = new File(settingsDir, '../SoftCircleServer').canonicalFile
-
-if (useLocalServer) {
-    assert serverRoot.isDirectory() : "SoftCircleServer not found at ${serverRoot}"
+// 开源 Demo：默认只依赖仓内 maven-repo / 远程 AAR。
+// 维护者本地联调闭源 SDK（可选）：
+//   ./gradlew :demo:assembleDebug -Pcardwidget.localSdkDir=/absolute/or/relative/path/to/sdk-root
+// sdk-root 下需有 core-lib/ 与 client-lib/（模块工程目录）。
+def localSdkDir = hasProperty('cardwidget.localSdkDir') ? getProperty('cardwidget.localSdkDir') : null
+if (localSdkDir) {
+    def serverRoot = new File(localSdkDir as String).canonicalFile
+    assert serverRoot.isDirectory() : "cardwidget.localSdkDir not found: ${serverRoot}"
     include ':cardwidget-core'
     include ':cardwidget-client'
     project(':cardwidget-core').projectDir = new File(serverRoot, 'core-lib')

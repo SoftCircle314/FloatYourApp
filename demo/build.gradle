@@ -33,9 +33,9 @@ android {
 }
 
 dependencies {
-    // 默认：已发布的闭源 Client AAR
-    // 本地改 SDK：-Pcardwidget.useLocalServer
-    if (rootProject.hasProperty('cardwidget.useLocalServer')) {
+    // 默认：仓内 / 远程专有 Client AAR
+    // 本地联调 SDK：与 settings 同样传 -Pcardwidget.localSdkDir=...
+    if (rootProject.hasProperty('cardwidget.localSdkDir')) {
         implementation project(':cardwidget-client')
     } else {
         implementation "com.softcircle.cardwidget:cardwidget-client:${CARDWIDGET_VERSION}"

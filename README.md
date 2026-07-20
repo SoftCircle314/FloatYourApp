@@ -57,19 +57,8 @@ Manifest 不用改。SoftCircle 扫描列表会出现 **两个** 面板。
 
 装 SoftCircle → 添加「秒表演示」/「运营演示」。
 
-维护者若要改闭源 SDK 源码，旁路 SoftCircleServer：
-
-```bash
-./gradlew :demo:assembleDebug -Pcardwidget.useLocalServer
-```
-
-发布新 AAR 到本仓 `maven-repo/`（在 SoftCircleServer 目录）：
-
-```bash
-./gradlew :cardwidget-core:publish :cardwidget-client:publish
-```
-
 ## 更多
 
 - [快速接入](docs/cardwidget/01-quickstart.md)
+- [公开 API](docs/cardwidget/02-public-api.md)
 - [换量合作](docs/cardwidget/04-partnership.md)
