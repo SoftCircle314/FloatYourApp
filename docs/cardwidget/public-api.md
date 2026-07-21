@@ -6,7 +6,7 @@
 - **`panelId`**：`panel("…")` 的 id 须与 `res/xml/card_widget_info_default.xml` 里 `card:panelId` **一致**。
 - **扫描列表**：以 XML `<panel>`（及 label / 预览等）为准；代码里的 `label` 等为辅助或回退，不替代 XML 声明。
 
-示例流程见 [快速接入](01-quickstart.md)。
+示例流程见 [快速接入](quickstart.md)。
 
 ## CardWidgetClient
 
@@ -27,7 +27,7 @@
 | `id` | 必填，与 XML `card:panelId` 一致 |
 | `label` | 辅助显示名；列表仍以 XML 为准 |
 | `minWidthDp` / `minHeightDp` | 可选，默认 `280` / `200` |
-| `partnerId` | 可选，换量归因；亦可只在 XML 声明（见 [换量合作](04-partnership.md)） |
+| `partnerId` | 可选，换量归因；亦可只在 XML 声明（见 [换量合作](partnership.md)） |
 | `factory` | `(PanelHost) -> View`，返回面板根 View |
 
 ## PanelHost

@@ -59,6 +59,6 @@ Manifest 不用改。SoftCircle 扫描列表会出现 **两个** 面板。
 
 ## 更多
 
-- [快速接入](docs/cardwidget/01-quickstart.md)
-- [公开 API](docs/cardwidget/02-public-api.md)
-- [换量合作](docs/cardwidget/04-partnership.md)
+- [快速接入](docs/cardwidget/quickstart.md)
+- [公开 API](docs/cardwidget/public-api.md)
+- [换量合作](docs/cardwidget/partnership.md)
