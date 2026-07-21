@@ -1,5 +1,12 @@
 # 快速接入
 
+## 0. 先装 SoftCircle 宿主
+
+面板的扫描、添加与负一屏展示由 **SoftCircle** 完成，请先安装宿主再接入：
+
+- 下载：[https://www.softcircle.cn](https://www.softcircle.cn)
+- 本仓 Demo 的**应用内预览**可不装宿主；要在负一屏看到面板，**必须**装 SoftCircle
+
 ## 1. 依赖
 
 先加仓库（本 Demo 仓已内嵌 `maven-repo/`；第三方工程可指向本仓 raw 地址或复制该目录）：
@@ -63,4 +70,8 @@ class MyApp : Application() {
 
 ## 4. 验证
 
-装 SoftCircle → 添加面板。列表中每个 XML `<panel>` 各占一项（首次添加不应再弹「打开 Demo」类关联启动提示）。
+1. 确认已安装 SoftCircle  
+2. 安装你的 App（或本仓 `./gradlew :demo:installDebug`）  
+3. SoftCircle → 负一屏 → **添加远程面板** → 选择对应项  
+
+列表中每个 XML `<panel>` 各占一项。
