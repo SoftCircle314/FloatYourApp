@@ -30,4 +30,7 @@ host.setClickOpenApp(openAppBtn, MainActivity::class.java)
 host.setClickOpenSoftCircle(softCircleBtn)
 ```
 
-合作与商务联系：请联系 SoftCircle（文档占位，后续替换）。
+合作与商务联系：
+
+- 邮箱：softcircle@foxmail.com
+- 电话：13554896856
