@@ -1,5 +1,7 @@
 # 快速接入
 
+用 **Cursor** 自动改工程时，可启用本仓 skill：`.cursor/skills/softcircle-remote-panel/SKILL.md`。
+
 ## 0. 先装 SoftCircle 宿主
 
 面板的扫描、添加与负一屏展示由 **SoftCircle** 完成，请先安装宿主再接入：
